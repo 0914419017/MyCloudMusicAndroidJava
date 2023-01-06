@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#88687EB5"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar"/>
+    
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/divider"
+        android:layout_height="@dimen/divider_small"/>
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:background="@color/primary_button"
+        app:tl_iconHeight="20dp"
+        app:tl_iconWidth="20dp"
+        app:tl_indicator_color="?attr/colorPrimary"
+        app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="?attr/colorPrimary"
+        app:tl_textUnselectColor="?attr/colorOnSurface"
+        app:tl_textsize="12sp"
+        app:tl_underline_color="#DDDDDD"
+        app:tl_underline_height="0dp"/>
+</LinearLayout>

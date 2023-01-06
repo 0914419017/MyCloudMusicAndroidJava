@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> <!--AppBarLayout主要实现标题的折叠功能
+    elevation阴影高度-->
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/SuperTheme.AppBarOverlay.Dark">
+    <!--android:elevation="20dp"--><!--阴影效果-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/SuperTheme.PopupOverlay.Light" />
+
+
+</com.google.android.material.appbar.AppBarLayout>

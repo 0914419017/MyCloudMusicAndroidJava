@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        applicationId "com.example.mycloudmusicandroidjava"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    viewBinding {
+        //开启视图绑定 用来代替findViewById
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    /*导入的模块项目*/
+    implementation project(path: ':super-j')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //引用在线框架
+    implementation 'com.qmuiteam:qmui:2.0.1'
+
+    //动态处理权限第三方框架
+    implementation 'com.github.permissions-dispatcher:permissionsdispatcher:4.9.2'
+    annotationProcessor 'com.github.permissions-dispatcher:permissionsdispatcher-processor:4.9.2'
+
+
+    //okhttp
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //使用json解析json
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    //适配retrofit支持rxjava
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    //使用响应式编程
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    //lang3工具包
+    implementation 'org.apache.commons:commons-lang3:3.8'
+
+    //通过OkHttp的拦截器
+    //实现在应用通知栏显示网络请求功能
+    debugImplementation 'com.github.chuckerteam.chucker:library:3.5.2'
+    releaseImplementation 'com.github.chuckerteam.chucker:library-no-op:3.5.2'
+
+    //类似TabLayout的第三方框架
+    implementation 'io.github.h07000223:flycoTabLayout:3.0.0'
+
+    //封装RecyclerView 提供更高层次的接口 第三方框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    //样式依赖
+    implementation 'com.google.android.material:material:1.2.0'
+
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:+'
+    annotationProcessor 'com.github.bumptech.glide:compiler:+'
+}

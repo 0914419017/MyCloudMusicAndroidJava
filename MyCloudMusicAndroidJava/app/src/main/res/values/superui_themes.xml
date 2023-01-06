@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--界面样式-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SuperTheme.AppBarOverlay.Dark" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="SuperTheme.PopupOverlay.Light" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SuperTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="SuperTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="SuperUI.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--主色调-->
+        <item name="colorPrimary">@color/super_click_background</item>
+        <item name="colorPrimaryVariant">@color/super_click_background</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!--次色调-->
+        <item name="colorSecondary">@color/super_click_background</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+
+        <!--Status bar color 改变系统图标色调-->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/super_black40</item>
+    </style>
+    
+    <!--圆角样式-->
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <!-- 叶子样式 -->
+    <style name="leafImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+    </style>
+
+
+</resources>

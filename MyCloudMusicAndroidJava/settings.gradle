@@ -1,0 +1,3 @@
+include ':super-j'
+include ':app'
+rootProject.name = "MyCloudMusicAndroidJava"
